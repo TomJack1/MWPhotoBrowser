@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
       :tag => s.version.to_s 
     }
 
-  s.platform = :ios, '7.0'
+  s.platform = :ios, '8.0'
   s.source_files = 'Pod/Classes/**/*'
   s.resource_bundles = {
     'CYLMWPhotoBrowser' => ['Pod/Assets/*.png']
