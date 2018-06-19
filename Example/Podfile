@@ -1,11 +1,11 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-target 'MWPhotoBrowser_Example', :exclusive => true do
+target 'MWPhotoBrowser_Example' do
   pod "CYLMWPhotoBrowser", :path => "../"
 end
 
-target 'MWPhotoBrowser_Tests', :exclusive => true do
-  pod "MWPhotoBrowser", :path => "../"
+target 'MWPhotoBrowser_Tests' do
+  pod "CYLMWPhotoBrowser", :path => "../"
 
   pod 'Specta'
   pod 'Expecta'

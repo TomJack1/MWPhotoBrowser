@@ -22,6 +22,21 @@ DerivedData
 # Bundler
 .bundle
 
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# CocoaPods
+
+Pods/
+Example/Pods/
+
+*.DS_Store
+
+
 Carthage
 # We recommend against adding the Pods directory to your .gitignore. However
 # you should judge for yourself, the pros and cons are mentioned at:
