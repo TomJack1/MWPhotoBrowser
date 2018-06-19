@@ -93,26 +93,27 @@
     } else {
         [self.collectionView layoutIfNeeded]; // Layout after content offset change
         if (_initialContentOffset.y != CGFLOAT_MAX) {
-        self.collectionView.contentOffset = _initialContentOffset;
-        [self.collectionView layoutIfNeeded]; // Layout after content offset change
-    }
-
-// Check if current item is visible and if not, make it so!
-if (_browser.numberOfPhotos > 0) {
-    NSIndexPath *currentPhotoIndexPath = [NSIndexPath indexPathForItem:_browser.currentIndex inSection:0];
-    NSArray *visibleIndexPaths = [self.collectionView indexPathsForVisibleItems];
-    BOOL currentVisible = NO;
-    for (NSIndexPath *indexPath in visibleIndexPaths) {
-        if ([indexPath isEqual:currentPhotoIndexPath]) {
-            currentVisible = YES;
-            break;
+            self.collectionView.contentOffset = _initialContentOffset;
+            [self.collectionView layoutIfNeeded]; // Layout after content offset change
         }
+        
+        // Check if current item is visible and if not, make it so!
+        if (_browser.numberOfPhotos > 0) {
+            NSIndexPath *currentPhotoIndexPath = [NSIndexPath indexPathForItem:_browser.currentIndex inSection:0];
+            NSArray *visibleIndexPaths = [self.collectionView indexPathsForVisibleItems];
+            BOOL currentVisible = NO;
+            for (NSIndexPath *indexPath in visibleIndexPaths) {
+                if ([indexPath isEqual:currentPhotoIndexPath]) {
+                    currentVisible = YES;
+                    break;
+                }
+            }
+            if (!currentVisible) {
+                [self.collectionView scrollToItemAtIndexPath:currentPhotoIndexPath atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
+            }
+        }
+        
     }
-    if (!currentVisible) {
-        [self.collectionView scrollToItemAtIndexPath:currentPhotoIndexPath atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
-    }
-}
-
 }
 
 - (void)performLayout {
