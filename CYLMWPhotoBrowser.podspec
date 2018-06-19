@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 
-  s.name = 'MWPhotoBrowser'
+  s.name = 'CYLMWPhotoBrowser'
   s.version = '2.1.2-0.0.1'
   s.license = 'MIT'
   s.summary = 'A simple iOS photo and video browser with optional grid view, captions and selections.'
@@ -19,9 +19,9 @@ Pod::Spec.new do |s|
     'https://raw.github.com/mwaterfall/MWPhotoBrowser/master/Screenshots/MWPhotoBrowser6.png'
   ]
 
-  s.homepage = 'https://github.com/mwaterfall/MWPhotoBrowser'
+  s.homepage = 'https://github.com/ChenYilong/MWPhotoBrowser'
   s.author = { 'Michael Waterfall' => 'michaelwaterfall@gmail.com' }
-  s.social_media_url = 'https://twitter.com/mwaterfall'
+  s.social_media_url = 'http://weibo.com/luohanchenyilong'
     s.source       = { 
       :git => "https://github.com/ChenYilong/MWPhotoBrowser.git", 
       :tag => s.version.to_s 
@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
   s.platform = :ios, '7.0'
   s.source_files = 'Pod/Classes/**/*'
   s.resource_bundles = {
-    'MWPhotoBrowser' => ['Pod/Assets/*.png']
+    'CYLMWPhotoBrowser' => ['Pod/Assets/*.png']
   }
   s.requires_arc = true
 
