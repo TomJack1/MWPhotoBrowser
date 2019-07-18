@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name = 'CYLMWPhotoBrowser'
-  s.version = '2.1.2-0.0.7'
+  s.version = '2.1.2-0.0.8'
   s.license = 'MIT'
   s.summary = 'A simple iOS photo and video browser with optional grid view, captions and selections.'
   s.description = <<-DESCRIPTION
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.author = { 'Michael Waterfall' => 'michaelwaterfall@gmail.com' }
   s.social_media_url = 'http://weibo.com/luohanchenyilong'
     s.source       = { 
-      :git => "https://github.com/TomJack1/MWPhotoBrowser.git",
+      :git => "https://TomJack1@github.com/TomJack1/MWPhotoBrowser.git",
       :tag => s.version.to_s 
     }
 
