@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.author = { 'Michael Waterfall' => 'michaelwaterfall@gmail.com' }
   s.social_media_url = 'http://weibo.com/luohanchenyilong'
     s.source       = { 
-      :git => "https://github.com/ChenYilong/MWPhotoBrowser.git", 
+      :git => "https://github.com/TomJack1/MWPhotoBrowser.git",
       :tag => s.version.to_s 
     }
 
