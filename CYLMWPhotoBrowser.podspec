@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name = 'CYLMWPhotoBrowser'
-  s.version = '2.1.2-0.0.10'
+  s.version = '2.1.2-0.0.11'
   s.license = 'MIT'
   s.summary = 'A simple iOS photo and video browser with optional grid view, captions and selections.'
   s.description = <<-DESCRIPTION
@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
 
   s.platform = :ios, '8.0'
   s.source_files = 'Pod/Classes/**/*'
-  s.s.resource_bundles = {
+  s.resource_bundles = {
     'MWPhotoBrowser' => ['Pod/Assets/*.png']
   }
   s.requires_arc = true
