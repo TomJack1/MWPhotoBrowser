@@ -74,6 +74,7 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     _enableGrid = YES;
     _startOnGrid = NO;
     _enableSwipeToDismiss = YES;
+    self.maxSelect = 1;
     _delayToHideElements = 5;
     _visiblePages = [[NSMutableSet alloc] init];
     _recycledPages = [[NSMutableSet alloc] init];

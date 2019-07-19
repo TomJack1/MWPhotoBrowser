@@ -29,8 +29,8 @@ Pod::Spec.new do |s|
 
   s.platform = :ios, '8.0'
   s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'CYLMWPhotoBrowser' => ['Pod/Assets/*.png']
+  s.resource = {
+    'MWPhotoBrowser' => ['Pod/Assets/*.png']
   }
   s.requires_arc = true
 

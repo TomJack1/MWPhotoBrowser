@@ -1105,6 +1105,11 @@
                     }
                 }
             }
+
+            displayActionButton = NO;
+            displaySelectionButtons = YES;
+            startOnGrid = YES;
+            enableGrid = NO;
 			break;
         }
 		default: break;
@@ -1124,6 +1129,12 @@
     browser.enableSwipeToDismiss = NO;
     browser.autoPlayOnAppear = autoPlayOnAppear;
     [browser setCurrentPhotoIndex:0];
+    
+    
+    
+//   UIBarButtonItem *ac = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(actionButtonPressed:)];
+//    [browser setValue:ac forKey:@"_actionButton"];
+    
     
     // Test custom selection images
 //    browser.customImageSelectedIconName = @"ImageSelected.png";
@@ -1211,6 +1222,9 @@
 
 - (void)photoBrowser:(MWPhotoBrowser *)photoBrowser didDisplayPhotoAtIndex:(NSUInteger)index {
     NSLog(@"Did start viewing photo at index %lu", (unsigned long)index);
+    
+    
+    
 }
 
 - (BOOL)photoBrowser:(MWPhotoBrowser *)photoBrowser isPhotoSelectedAtIndex:(NSUInteger)index {
@@ -1222,6 +1236,21 @@
 //}
 
 - (void)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index selectedChanged:(BOOL)selected {
+    
+    int count = 0;
+    for (NSNumber * isSelect in _selections) {
+        
+        if ([isSelect boolValue]) {
+            count ++;
+        }
+    }
+    if (count > 2) {
+        if ([[_selections objectAtIndex:index] boolValue]) {
+            [_selections replaceObjectAtIndex:index withObject:[NSNumber numberWithBool:selected]];
+        }
+        return;
+    }
+    
     [_selections replaceObjectAtIndex:index withObject:[NSNumber numberWithBool:selected]];
     NSLog(@"Photo at index %lu selected %@", (unsigned long)index, selected ? @"YES" : @"NO");
 }
