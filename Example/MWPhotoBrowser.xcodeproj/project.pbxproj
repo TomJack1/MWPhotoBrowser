@@ -101,7 +101,7 @@
 		9C499760A548FA91724E083A /* libPods-MWPhotoBrowser_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MWPhotoBrowser_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5C85CB7FE89F584D392C9CF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		CCBC4349E4DEBB040AA2FE86 /* Pods-MWPhotoBrowser_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MWPhotoBrowser_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MWPhotoBrowser_Tests/Pods-MWPhotoBrowser_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		E264DFCE22E05F2900202D97 /* CYLMWPhotoBrowser.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CYLMWPhotoBrowser.podspec; path = ../CYLMWPhotoBrowser.podspec; sourceTree = "<group>"; };
+		E264DFCE22E05F2900202D97 /* CYLMWPhotoBrowser.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CYLMWPhotoBrowser.podspec; path = ../CYLMWPhotoBrowser.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
