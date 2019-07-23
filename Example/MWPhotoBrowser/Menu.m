@@ -1193,7 +1193,14 @@
 }
 
 #pragma mark - MWPhotoBrowserDelegate
-
+- (UIBarButtonItem *)setBrowserBarButtonItem {
+    
+    return [[UIBarButtonItem alloc]initWithTitle:@"删除" style:UIBarButtonItemStylePlain target:self action:@selector(actionData:)];
+}
+- (void)actionData:(id)sender {
+    
+    
+}
 - (NSUInteger)numberOfPhotosInPhotoBrowser:(MWPhotoBrowser *)photoBrowser {
     return _photos.count;
 }
@@ -1244,14 +1251,16 @@
             count ++;
         }
     }
-    if (count > 2) {
-        if ([[_selections objectAtIndex:index] boolValue]) {
-            [_selections replaceObjectAtIndex:index withObject:[NSNumber numberWithBool:selected]];
-        }
+    if ((count + 0) <= 3) {
+        
+        
+        [_selections replaceObjectAtIndex:index withObject:[NSNumber numberWithBool:selected]];
         return;
     }
+    if ([[_selections objectAtIndex:index] boolValue]) {
+        [_selections replaceObjectAtIndex:index withObject:[NSNumber numberWithBool:selected]];
+    }
     
-    [_selections replaceObjectAtIndex:index withObject:[NSNumber numberWithBool:selected]];
     NSLog(@"Photo at index %lu selected %@", (unsigned long)index, selected ? @"YES" : @"NO");
 }
 

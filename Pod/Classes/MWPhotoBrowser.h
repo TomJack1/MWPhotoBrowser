@@ -24,6 +24,7 @@
 
 - (NSUInteger)numberOfPhotosInPhotoBrowser:(MWPhotoBrowser *)photoBrowser;
 - (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index;
+- (UIBarButtonItem *)setBrowserBarButtonItem;
 
 @optional
 

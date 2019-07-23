@@ -182,7 +182,12 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
         _nextButton = [[UIBarButtonItem alloc] initWithImage:nextButtonImage style:UIBarButtonItemStylePlain target:self action:@selector(gotoNextPage)];
     }
     if (self.displayActionButton) {
-        _actionButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(actionButtonPressed:)];
+        
+        if ([self.delegate respondsToSelector:@selector(setBrowserBarButtonItem)]) {
+            _actionButton = [self.delegate setBrowserBarButtonItem];
+        }else {
+            _actionButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(actionButtonPressed:)];
+        }
     }
     
     // Update
@@ -1170,7 +1175,7 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
         }
     }
     if (index != NSUIntegerMax) {
-        [self setPhotoSelected:selectedButton.selected atIndex:index];
+        [self setPhotoSelected:!selectedButton.selected atIndex:index];
     }
     selectedButton.selected = [self.delegate photoBrowser:self isPhotoSelectedAtIndex:index];
 }
