@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name = 'CYLMWPhotoBrowser'
-  s.version = '2.1.2-0.0.11'
+  s.version = '2.1.2-0.0.12'
   s.license = 'MIT'
   s.summary = 'A simple iOS photo and video browser with optional grid view, captions and selections.'
   s.description = <<-DESCRIPTION
