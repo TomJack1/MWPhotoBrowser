@@ -158,8 +158,9 @@
 }
 
 - (void)selectionButtonPressed {
-    _selectedButton.selected = !_selectedButton.selected;
+    //    _selectedButton.selected = !_selectedButton.selected;
     [_gridController.browser setPhotoSelected:_selectedButton.selected atIndex:_index];
+    _selectedButton.selected = [_gridController.browser.delegate photoBrowser:_gridController.browser isPhotoSelectedAtIndex:_index];
 }
 
 #pragma mark - Touches
