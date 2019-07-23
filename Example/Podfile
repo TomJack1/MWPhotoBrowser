@@ -12,4 +12,4 @@ target 'MWPhotoBrowser_Tests' do
 #  pod 'FBSnapshotTestCase'
 #  pod 'Expecta+Snapshots'
 end
-b
+
